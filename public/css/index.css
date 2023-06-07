@@ -1,9 +1,9 @@
-.lesson-four-task-one:hover {
+.lesson-four-task-one button:hover {
     color:red;
     background: yellow;
 }
 
-.lesson-four-task-two > h1:hover {
+.lesson-four-task-two a:hover ~ h1 {
     background: green;
 }
 
@@ -24,7 +24,7 @@
     color: orange;
 }
 
-.lesson-four-task-nineteen:focus-within {
+.lesson-four-task-nineteen button:focus-within {
     background-color: yellow;
     color: white;
 }
@@ -73,7 +73,7 @@
 }
 
 .lesson-four-task-sixteen input:out-of-range {
-    background-color: red;
+    color: red;
 }
 
 .lesson-four-task-seventeen input:in-range {
