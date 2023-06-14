@@ -20,17 +20,10 @@
 }
 
 .nav {
-display: block;
+	display: block;
 }
 
 .nav_link {
-color: ''	
-}
-
-.nav_vertical {
-
-}
-
-.nav_inline {
-
+	color: red;
+	text-decoration: none;
 }
