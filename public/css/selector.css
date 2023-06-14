@@ -1,0 +1,207 @@
+:root {
+  background: purple;
+}
+
+html {
+  max-width: 720px;
+
+  background: blue;
+}
+
+body {
+  background: #fff;
+}
+
+* {
+  color: red;
+}
+
+h1 {
+  color: black;
+}
+
+.box {
+  background: #d6d0d0;
+}
+
+#user {
+  color: blueviolet;
+}
+
+h1, h2#user, button {
+  background: darkblue;
+  color: greenyellow;
+}
+
+h1.button {
+  background: brown;
+  color:aqua;
+}
+
+div > p {
+  color: violet;
+}
+/* можно писать и таким образом
+т.е. внутри каждого тега с классом
+box если есть тег p будет цвет как 
+указан в селекторе */
+.box > p {
+  color: violet;
+}
+
+div p {
+  color: violet;
+}
+/* div >> p {
+  color: violet;
+} 
+в Prettier не всегда работает
+через >>, лучше использовать
+пробел
+*/
+
+.card-dark {
+  background: #ee6a6a;
+}
+
+.item {
+  background: lightskyblue;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+.input-dark {
+  background: #aaa0a0;
+}
+
+.input-dark[required] {
+  background: #1b1515;
+}
+
+.input-dark[type="number"] {
+  background: #26a00d;
+}
+
+.small-img[alt~="small"] {
+  background: blue;
+  height: 550px;
+}
+
+a[rel~="external"] {
+  color: chartreuse;
+}
+
+button[class|='btn'] {
+  background: rebeccapurple;
+}
+
+a[class^='btn'] {
+  background: rgb(46, 41, 51);
+}
+
+.btn::first-line {
+  color:red;
+}
+
+.big-text::first-line {
+  color: aliceblue;
+}
+
+.input-dark::placeholder {
+  color: lightblue;
+  background: #1b1515;
+}
+
+.big-text::before,
+.big-text::after {
+  content: "$$$";
+  color: #26a00d;
+}
+
+#test:target {
+  color: #1b1515;
+  background: #26a00d;
+}
+
+.link:link {
+  color: darkred;
+}
+
+.link:hover {
+  color: darkgreen;
+}
+
+.card:hover {
+  background: darkgray;
+}
+
+.link:active {
+  color: white;
+}
+
+input {
+  background-color: aqua;
+}
+
+input:focus {
+  background-color: crimson;
+}
+
+.card:focus-within {
+  background-color: darkturquoise;
+}
+
+.card:lang(en) > span::after {
+  content: " (English)";
+  color: #26a00d;
+}
+
+button {
+  background-color: greenyellow;
+  color: blue;
+}
+
+button:enabled {
+  background-color: #26a00d;
+}
+
+.inp:read-write {
+  background-color: aqua;
+}
+
+.inp:read-only {
+  background-color: red;
+}
+
+input[type="checkbox"]:checked ~ span {
+  background-color: red;
+  color:#fff;
+}
+
+.valid:valid {
+  background-color: blueviolet;
+}
+
+.valid:invalid {
+  background-color: rgb(80, 23, 133);
+}
+
+.valid:optional {
+  background-color: purple;
+}
+
+.number:focus {
+  background-color: gray;
+  color: whitesmoke;
+}
+
+.number:out-of-range 
+.number:invalid {
+  background-color: red;
+}
+
+input:placeholder-shown ~ span{
+  background-color: pink;
+}

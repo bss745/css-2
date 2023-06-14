@@ -1,7 +1,45 @@
-html {
-  max-width: 720px;
+.first > p {
+    background: blue;
+    color:rgba(0, 100, 0, 0.6);
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke: 1px red;
 }
 
-body {
-  background: #fff;
+.first > p:hover {
+    -webkit-text-fill-color: aqua;
+    -webkit-text-stroke: 1px yellowgreen;
+    direction: rtl;
+    writing-mode: vertical-rl;
+    text-align: center;
+	text-decoration: underline dotted red;
+}
+
+* {
+	font-family: "Roboto", sans-serif;
+	font-size: 24px;
+	font-weight: 900;
+	font-display: swap;
+}
+	
+.big-text {
+	background-color: lch(70, 50, 120);
+	color: lab(90, 10, -45);
+	text-emphasis: double-circle;
+	text-emphasis-color: red;
+	text-emphasis-style: filled;
+	text-emphasis-position: right;
+	text-orientation: sideways-right;
+	font-stretch: ultra-expanded;
+	font-variant-numeric: diagonal-fractions;
+}
+
+.test {
+	display: none;
+}
+
+.block {
+	display: block;
+	background: lightslategray;
+	margin: auto;
+	width: fit-content;
 }
