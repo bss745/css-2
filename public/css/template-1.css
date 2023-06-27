@@ -33,6 +33,8 @@
 .nav_link:hover {
 	color: blue;
 	text-decoration: underline;
+
+	opacity: 20%;
 }
 
 .nav_vertical > .nav_link {
@@ -89,6 +91,7 @@
 .hero_text {
 	font-size: 20px;
 	color: #212529;
+	/* color: transparent; */
 	text-align: center;
 	max-width: 585px;
 	margin: 0 auto;
@@ -142,4 +145,50 @@
 	width: 100%;
 	font-size: 19px;
 	padding: 9px;
+}
+
+.hero_text {
+	background-image: url("/img/test2.jpg");
+	background-attachment: scroll;	
+	background-size: cover;
+	height: 50%;
+	/* -webkit-background-clip: text; */
+
+}
+
+.card_block {
+	list-style-type: disc;
+}
+
+.card_price_description_item {
+	display: list-item;
+}
+
+.table tr {
+	border: 1px solid #6C757D;
+	
+}
+
+.table tr td {
+	border: 1px solid rgb(49, 31, 31);
+	border-bottom-color: red;
+	border-right-color: blue;
+}
+
+.table {
+	table-layout: auto;
+
+	border-collapse: unset;
+
+	border-spacing: 10px 16px;
+	caption-side: top;
+	empty-cells: hide;
+}
+
+.card:hover {
+	opacity: 0.5;
+}
+
+.nav_link::before, .nav_link::after {
+	content: open-quote;
 }

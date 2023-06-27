@@ -27,9 +27,9 @@
 
 
 	<section class="page_block">
-		<div class="row g-4">
+		<div class="flex_container">
 			{{#each preview}}
-				<div class="col-6">
+				<div class="flex_item">
 					{{> cardPreview data=this}}
 				</div>
 			{{/each}}
@@ -84,14 +84,14 @@
 
 	<footer class="page_block">
 		<hr class='divider' />
-		<div class="row footer">
-			<div class="col-3">
+		<div class="footer">
+			<div class="">
 				{{> logo}}
 				<span class="footer_copyright">Copyright 2023-2024</span>
 			</div>
 		
 			{{#each footer}}
-				<div class="col-3">
+				<div class="">
 					<span class="footer_title">{{title}}</span>
 					{{> nav list=links isVertical=true}}
 				</div>

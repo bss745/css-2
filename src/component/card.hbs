@@ -13,11 +13,11 @@
 				</span>
 			</div>
 
-			<div class="card_price_block">
+			<ul class="card_price_block">
 				{{#each features}}
-				<span class="card_price_description_item">{{this}}</span>
+				<li class="card_price_description_item">{{this}}</li>
 				{{/each}}
-			</div>
+			</ul>
 
 			<div class="card_block">
 					<button class="btn {{#if @first}}btn-outline-primary{{else}}btn-primary{{/if}} card_button">{{button}}</button>

@@ -30,6 +30,23 @@
 			
 		</main>
 	</div>
+
+	<div class="page_block">
+		<table class="table">
+			<caption>My table</caption>
+			<tbody>
+				{{#each footer}}
+					<tr>
+						{{#each links}}
+							<td>
+								{{text}}	
+							</td>
+						{{/each}}
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
 	
 	<div class="page_block">
 		<hr class='divider' />
