@@ -1,3 +1,30 @@
+@keyframes fly {
+	from {
+		top: 0;
+		left: 0;
+
+		background-color: red;
+
+		width: 100px;
+	}
+
+	50% {
+		top: 500px;
+		left: 0;
+
+		background-color: blue;
+
+		width: 0px;
+	}
+
+	to {
+		top: 0;
+		left: 500px;
+
+		background-color: yellow;
+	}
+}
+
 :root {
 	--space-m: 12px;
 	--space-xm: 16px;
@@ -18,6 +45,8 @@
 
 	--weight-title: 500;
 	--weight-text: 400;
+
+	--page-width: 960px;
 }
 
 /* ============================ */
@@ -38,6 +67,8 @@
 	flex-direction: column;
 
 	gap: 80px;
+
+	padding-top: 74px;
 }
 
 /* ============================ */
@@ -48,6 +79,16 @@
 
 	display: flex;
 	justify-content: space-between;
+
+	position: fixed;
+
+	width: var(--page-width);
+
+	top: 0;
+	/* left: calc (50% - (var(--page-width) / 2); */
+
+	background-color: var(--color-white);
+	z-index: 1;
 }
 
 .logo {
@@ -193,15 +234,20 @@
 	text-decoration: none;
 	padding: var(--space-m) var(--space-xm);
 	border-radius: var(--border-radius);
+	transition-property: opacity, background-color, color;
+	transition-duration: 1s;
 }
 
 .card_button {
 	color: var(--color-white);
 	background-color: var(--color-primary);
+
 }
 
 .button:hover {
 	opacity: 0.7;
+	background-color: yellowgreen;
+	color: darkblue;
 }
 
 .form {
@@ -238,4 +284,76 @@
 	width: 100%;
 	max-width: 160px;
 	color: var(--color-text);
+}
+
+.hero_slider_icon {
+	background-color: var(--color-primary);
+
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: var(--border-radius);
+	color: var(--color-white);
+
+	position: absolute;
+	top: calc(50% - 15px);
+}
+
+.hero_slider_icon:hover {
+	opacity: 0.5;
+	cursor: pointer;
+} 
+
+.hero_slider {
+	position: relative;
+}
+
+.hero_slider_left {
+	left: var(--space-l);
+} 
+
+.hero_slider_right {
+	right: var(--space-l);
+} 
+
+.modal {
+	position: fixed;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+
+	/* height: 150px; */
+	width: 600px;
+	border-radius: var(--border-radius);
+	background: black;
+	color: var(--color-white);
+
+	padding: 24px;
+
+	line-height: 150%;
+
+	/* transition-property: top;
+	transition-duration: 3s; */
+}
+
+body:hover .modal {
+	animation-name: fly;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(0.93, 0.06, 0.14, 0.94);
+
+	animation-iteration-count: infinite;
+
+	animation-direction: alternate-reverse;
+}
+
+.modal_image {
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+
+:root {
+	scroll-behavior: smooth;
 }
