@@ -1,0 +1,7 @@
+{{!-- залишу nav_vertical про всяк випадок --}}
+
+<div class='nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}'>
+  {{#each list}}
+    <a href="{{url}}" class='nav_link_2'>{{text}}</a>
+  {{/each}}
+</div>

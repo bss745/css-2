@@ -1,0 +1,64 @@
+	<header class="header">
+		{{#with header}}
+			
+			{{> headerDark}}
+
+		{{/with}}		
+	</header>
+
+	{{#with hero}}
+		<div class="hero">
+			<h2 class="hero_title">{{title}}</h2>
+			<p class="hero_text">{{description}}</p>
+			{{#with button}}
+				<button class="hero_button" url="{{url}}">{{text}}</button>
+			{{/with}}
+		</div>
+	{{/with}}
+
+	{{#with about}}
+		<div class="shop">
+			<h3 class="shop_title">{{heading}}</h3>
+			<p class="shop_text">{{info}}</p>
+		</div>
+	{{/with}}
+
+	<div class="articles">
+		<div class="articles_header">	
+			<h2 class="articles_title">Our articles</h2>
+			<button class="articles_logo">View All</button>
+		</div>
+
+		<div class="articles_card">
+			{{#each articles}}
+				<div>
+					<img src="{{photo}}" alt="Article Image" class="articles_image">
+					{{#if isNew}}
+						<span class='badge_articles'>NEW</span>
+					{{/if}}
+						<h4 class="articles_name">{{name}}</h4>
+						<span class="articles_text">{{description}}</span>
+						<button class="articles_button">Read All</button>
+				</div>
+			{{/each}}
+		</div>
+
+	</div>
+
+	<footer class="footer">
+		{{#with footer}}
+			<div class="">
+				<span class="footer_copyright">{{copyright}}</span>
+			</div>
+
+		<div class="nav_link_footer_items">
+			{{#each pages}}
+			
+				<a href="{{path}}" class='nav_link_footer'>{{name}}</a>
+			
+			{{/each}}
+		</div>
+			
+		{{/with}}
+	</footer>
+

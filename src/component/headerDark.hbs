@@ -1,0 +1,25 @@
+	<div class="header_top">
+				<button>
+					{{> logo2}}
+				</button>
+
+				<nav class='header_nav'>
+					
+					<div class="header_nav_right">
+					{{> nav2 list=links}}
+					</div>
+				</nav>
+			</div>
+
+			<div class="header_bottom">
+				{{#with ad}}
+					<div class="header_bottom_left">
+						<button>
+							{{> logo3}}
+						</button>
+						<span>{{text}}:</span>
+						<a href="#">{{url}}</a>
+					</div>
+				{{/with}}
+				<span>Users online:{{userOnline}}</span>
+			</div>
