@@ -1,3 +1,17 @@
+@import "/css/var.css";
+
+@font-face {
+	font-family: "Segment";
+	src: url("/font/Segment-Regular.otf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Segment";
+	src: url("/font/Segment-SemiBold.otf");
+	font-weight: 600;
+}
+
 @keyframes fly {
 	from {
 		top: 0;
@@ -23,30 +37,6 @@
 
 		background-color: yellow;
 	}
-}
-
-:root {
-	--space-m: 12px;
-	--space-xm: 16px;
-	--space-l: 24px;
-	--space-b: 36px;
-
-	--size-s: 14px;
-	--size-d: 16px;
-	--size-l: 20px;
-
-	--color-border: rgb(75, 59, 59);
-	--color-primary: rgb(46, 46, 255);
-	--color-white: #fff;
-	--color-title: #212529;
-	--color-text: #343a40;
-
-	--border-radius: 12px;
-
-	--weight-title: 500;
-	--weight-text: 400;
-
-	--page-width: 960px;
 }
 
 /* ============================ */
@@ -356,4 +346,75 @@ body:hover .modal {
 
 :root {
 	scroll-behavior: smooth;
+}
+
+/* урок правила та одиниці вимірювання */
+
+.blog {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+/* 1. вариант */
+@media all and (max-width: 800px) {
+	.blog {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* 2 вариант */
+@media all and (600px < width <= 800px) {
+	.blog {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media all and (width <= 600px) {
+	.blog {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media all and (not (min-width: 400px)) {
+	.page_content {
+		background-color: crimson;
+	}
+}
+
+.form {
+	gap: 12px;
+}
+
+@media all and (width <= 560px) {
+	.form {
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.form_info {
+		max-width: 300px;
+		width: 100%;
+		line-height: 150%;
+	}
+
+	.form_content {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.hero_container {
+	container-type: inline-size;
+	container-name: hero
+}
+
+@container hero (width < 960px) {
+	.hero {
+		flex-direction: column;
+	}
+}
+
+.ex {
+	font-size: 1ex;
 }
