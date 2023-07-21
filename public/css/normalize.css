@@ -1,4 +1,6 @@
+@layer normalize, block, element, mod, adaptive;
 
+@layer normalize {
 
 /* Document
    ========================================================================== */
@@ -937,4 +939,6 @@ input[type='number'] {
 input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
 }
